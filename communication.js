@@ -1,8 +1,9 @@
 class Communication
 {
-	constructor(queryParams) 
+	constructor(url) 
 	{
-		this.queryParams = queryParams;
+		this.queryParams = UrlUtils.retriveQueryParms(url);
+		this.queryParams.isLTIRedirect = true;
 	}
 	
 	getScore()
@@ -11,6 +12,16 @@ class Communication
 	}
 	
 	setScore()
+	{
+		//Call UrlUtils.postData 
+	}
+	
+	getState()
+	{
+		//Call UrlUtils.fetchData 
+	}
+	
+	setState()
 	{
 		//Call UrlUtils.postData 
 	}
